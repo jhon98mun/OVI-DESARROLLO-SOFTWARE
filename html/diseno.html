@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Diseño</title>      
+        <script language="javascript">
+             //script por Tunait
+             var ventana
+             var cont=0
+             var titulopordefecto = "imagen"
+             function afoto(cual,titulo)
+             {
+             if(cont==1){ventana.close();ventana=null}
+             if(titulo==null){titulo=titulopordefecto}
+             ventana=window.open('','ventana','resizable=yes,sc rollbars=no,width=50,height=50')
+             ventana.document.write('<html><head><title>' + titulo + '</title></head><body style="overflow:hidden" marginwidth="0" marginheight="0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" scroll="no" onUnload="opener.cont=0"><img src="' + cual + '" onLoad="opener.redimensionar(this.width, this.height)"><br><div align="center"><a href="javascript:this.close()">cerrar</a>')
+             ventana.document.close()
+             cont++
+             }
+             function redimensionar(ancho, alto)
+             {
+             ventana.resizeTo(ancho+12,alto+50)
+             ventana.moveTo((screen.width-ancho)/2,(screen.height-alto)/2) //centra la ventana. Eliminar si no se quiere centrar el popup
+             }
+         </script>           
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="mainWrap" id="texto"   >
+            <h1>ETAPA DE DISEÑO</h1></br></br>                    
+            <p>
+                Es donde se utiliza la información recolectada en la etapa
+                de Analisis para esta etapa de diseño donde se determina
+                cómo funcionará software de forma general sin entrar en detalles.
+                Realizando un prototipo de este, en esta etapa se realizan 
+                los Casos de Uso para cubrir las funciones que realizará
+                el sistema, a continuación encontrara material
+                de apoyo para esta etapa.
+            </p></br></br>             
+            <h7>(click sobre la imagen)</h7>          
+            <table>
+                <tr>
+                    <th>
+                        <a  href="javascript:afoto('../imagenes/etapa_diseno.jpg','diseno')"> <img class="imagenes1"  src = "../imagenes/etapa_diseno.jpg"> </a>
+                    </th>
+                    <th>
+                        <a href="javascript:afoto('../imagenes/etapa_diseno2.jpg','diseno')"> <img class="imagenes1"  src = "../imagenes/etapa_diseno2.jpg"> </a>
+                    </th>
+                </tr>               
+            </table>
+            
+          
+
+            
+            </br></br>
+           
+            <h2>LECTURAS</h2></br></br>
+                <p>
+                    Ciens.ucv, Diseño de software
+                    <a href="http://www.ciens.ucv.ve:8080/genasig/sites/disist/archivos/clase2.pdf" target="_blank" ></br> <img id="" src="../imagenes/web.png">  </a>   
+                </p></br></br>  
+                <p>
+                    Colección de tesis digitales universidad  de las américas puebla, 2017, capitulo 2, pagina 15-19.</br>
+                    <a href="http://catarina.udlap.mx/u_dl_a/tales/documentos/lis/fuentes_k_jf/capitulo2.pdf" target="_blank" > <img id="" src="../imagenes/web.png">  </a>   
+                </p>   
+        </div>
+    </body>
+</html>

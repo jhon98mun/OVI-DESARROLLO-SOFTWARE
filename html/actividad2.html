@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Test</title>
+
+<script language="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var ans = new Array;
+var done = new Array;
+var yourAns = new Array;
+var explainAnswer = new Array;
+
+
+ans[1] = "a";
+ans[2] = "c";
+ans[3] = "a";
+ans[4] = "d";
+ans[5] = "a";
+
+
+
+function Engine(question, answer) {
+yourAns[question]=answer;
+}
+
+function Score(){
+var answerText = "Resultados.\n------------------------------------\n";
+var score = 0;
+for(i=1;i<=5;i++){
+   answerText=answerText+"\nPregunta :"+i+"\n";
+  if(ans[i]!=yourAns[i]){
+   // answerText=answerText+"\n La respuesta correcta era "+ans[i]+"\n"+explainAnswer[i]+"\n";
+  answerText=answerText+"La respuesta correcta era "+ans[i];
+  }
+  else{
+    answerText=answerText+"¡Correcta! ";
+    score++;
+  }
+}
+
+answerText=answerText+"\n\nTu marcador total es : "+score+"\n";
+
+//now score the user
+answerText=answerText+"\nComentario final : ";
+if(score<=0){
+answerText=answerText+"Tienes que aprender bastante más";
+}
+if(score>=1 && score <=2){
+answerText=answerText+"Necesitas más práctica";
+}
+if(score>=3 && score <=4){
+answerText=answerText+"No has estado mal";
+}
+if(score>4){
+answerText=answerText+"¡Eres todo un maestro!";
+}
+
+alert(answerText);
+
+}
+//  End -->
+</script>
+
+</head>
+
+
+
+<body >
+
+<div align="CENTER">
+<h1><font size="3">Test sobre Desarrollo De Software</font></h1>
+        <a href="actividad2_1.html"><img src="../imagenes/next.png">Siguiente</a>
+
+<b>Comprueba tus conocimientos sobre todo lo aprendido</b><hr>
+
+<form>
+<b>1. ¿Fase en la que se codifica el software?</b><br>
+<input type="radio" name="q1" value="a" onclick="Engine(1, this.value)">a) Desarrollo<br>
+<input type="radio" name="q1" value="b" onclick="Engine(1, this.value)">b) Analisis<br>
+<input type="radio" name="q1" value="c" onclick="Engine(1, this.value)">c) Diseño<br>
+<input type="radio" name="q1" value="d" onclick="Engine(1, this.value)">d) Pruebas<p>
+<b>2. ¿No es un requsito funcional?</b><br>
+<input type="radio" name="q2" value="a" onclick="Engine(2, this.value)">a) Descripciones de los datos a ser ingresados en el sistema.<br>
+<input type="radio" name="q2" value="b" onclick="Engine(2, this.value)">b) Descripciones de las operaciones a ser realizadas por cada pantalla.<br>
+<input type="radio" name="q2" value="c" onclick="Engine(2, this.value)">c) dependibilidad y usabilidad del sistema<br>
+<input type="radio" name="q2" value="d" onclick="Engine(2, this.value)">d)Descripción de los flujos de trabajo realizados por el sistema.</p><p>
+<b>3. ¿Requisito No Funcional?</b><br>
+<input type="radio" name="q3" value="a" onclick="Engine(3, this.value)">a) representan características generales y restricciones de la aplicación o sistema que se esté desarrollando.<br>
+<input type="radio" name="q3" value="b" onclick="Engine(3, this.value)">b) describen cualquier actividad que este deba realizar<br>
+<input type="radio" name="q3" value="c" onclick="Engine(3, this.value)">c) disminuye los costos de operación y de ejecución<br>
+<input type="radio" name="q3" value="d" onclick="Engine(3, this.value)">d) Todas Las Anteriores  </p><p>
+<b>4. ¿Fase de Diseño?</b><br>
+<input type="radio" name="q4" value="a" onclick="Engine(4, this.value)">analisis de requisitos<br>
+<input type="radio" name="q4" value="b" onclick="Engine(4, this.value)">es el proceso de mejorar y optimizar el software desplegado<br>
+<input type="radio" name="q4" value="c" onclick="Engine(4, this.value)"> Realización del manual de usuario, y posiblemente un manual técnico<br>
+<input type="radio" name="q4" value="d" onclick="Engine(4, this.value)">proporcionar una idea completa de lo que es el software</p><p>
+<b>5. ¿casos de uso? </b><br>
+<input type="radio" name="q5" value="a" onclick="Engine(5, this.value)">Funcionalidad, Confiabilidad,Usabilidad,Eficiencia<br>
+<input type="radio" name="q5" value="b" onclick="Engine(5, this.value)">es una descripción de los pasos o las actividades que deberán realizarse para llevar a cabo algún proceso.<br>
+<input type="radio" name="q5" value="c" onclick="Engine(5, this.value)">diseño prototipo, Confiabilidad,Usabilidad,Eficiencia<br>
+<input type="radio" name="q5" value="d" onclick="Engine(5, this.value)">Funcionalidad, diagramas casos de uso,Usabilidad,Eficiencia/p><p>
+</p><center>
+<input type="button" onclick="Score()" value="Bien, ¿qué tal he estado?">
+</center>
+</form>
+</div></body></html>

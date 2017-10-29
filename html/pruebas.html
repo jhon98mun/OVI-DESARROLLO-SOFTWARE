@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pruebas</title>      
+        <script language="javascript">
+             //script por Tunait
+             var ventana
+             var cont=0
+             var titulopordefecto = "imagen"
+             function afoto(cual,titulo)
+             {
+             if(cont==1){ventana.close();ventana=null}
+             if(titulo==null){titulo=titulopordefecto}
+             ventana=window.open('','ventana','resizable=yes,sc rollbars=no,width=50,height=50')
+             ventana.document.write('<html><head><title>' + titulo + '</title></head><body style="overflow:hidden" marginwidth="0" marginheight="0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" scroll="no" onUnload="opener.cont=0"><img src="' + cual + '" onLoad="opener.redimensionar(this.width, this.height)"><br><div align="center"><a href="javascript:this.close()">cerrar</a>')
+             ventana.document.close()
+             cont++
+             }
+             function redimensionar(ancho, alto)
+             {
+             ventana.resizeTo(ancho+12,alto+50)
+             ventana.moveTo((screen.width-ancho)/2,(screen.height-alto)/2) //centra la ventana. Eliminar si no se quiere centrar el popup
+             }
+         </script>           
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="mainWrap" id="texto"   >
+            <h1>ETAPA DE PRUEBAS</h1></br></br>                    
+            <p>
+                En este módulo se miraran los diferentes tipos de pruebas
+                que existen para probar la funcionalidad del software,
+                donde  es probado cada módulo del sistema, como por ejemplo
+                si un determinado modulo guarda, modificar, elimina
+                correctamente para posteriormente probarlo de forma integral,
+                a continuación encontrara material de apoyo para esta etapa.
+            </p></br></br>             
+            <h7>(click sobre la imagen)</h7>
+            
+            <div align="center"  >         <a href="javascript:afoto('../imagenes/etapa_pruebas.jpg','pruebas')"> <img class="imagenes"  src = "../imagenes/etapa_pruebas.jpg"> </a></div></br></br>
+           
+            <h2>LECTURAS</h2></br></br>
+                <p>
+                    Jorge Hernan Abad Londoño, 06 abr del 2005, Pruebas de software</br>
+                    <a href="http://www.panel.es/blog/software-qa-cuales-son-los-tipos-de-pruebas-software/" target="_blank" ></br> <img id="" src="../imagenes/web.png">  </a>   
+                </p></br></br>  
+                <p>
+                    
+
+
+                       pruebas de software - SENA - Servicio Nacional de Aprendizaje-Blackboard.</br>
+                    <a href="https://senaintro.blackboard.com/bbcswebdav/institution/semillas/228106_2_VIRTUAL-2015/contenido/oaaps/oaap9/aa1/oa_pruebas_final/utilidades/descargable.pdf" target="_blank" > <img id="" src="../imagenes/web.png">  </a>   
+                </p>   
+        </div>
+    </body>
+</html>

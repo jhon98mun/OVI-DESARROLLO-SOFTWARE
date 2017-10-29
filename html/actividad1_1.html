@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Actividades</title>      
+        <link rel="stylesheet" type="text/css" href="../css/sopa.css">
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="../js/wordfind.js"></script> 
+    <script type="text/javascript" src="../js/wordfindgame.js"></script> 
+          
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Encuentre las Palabras</h1>
+    <div id='juego'></div>
+    <div id='Palabras'></div>
+    
+    <div><button id='solve'>Resolver el juego</button></div>
+    <script>
+    var words = ['PHP','CSS','HTML','JAVASCRIPT','JQUERY','NETBEANS'];
+    var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras'); 
+        
+    var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
+    wordfind.print(puzzle);   
+        
+    $('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+        
+    </script>
+
+    </body>
+</html>
